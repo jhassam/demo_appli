@@ -1,0 +1,21 @@
+There Might be situation when you land up with the error “‘rake/rdoctask’ is obsolete and no longer supported. Use ‘rdoc/task’ (available in RDoc 2.4.2+) instead“.
+
+This situation happens when you are trying to run command “db:migrate” and
+1. You are new to Rails ( ;) )
+2. No, when your default environment consists of new rake version, and application needs old one.
+
+3. Best Option to specify old rake version i.e. ’0.8.7′
+
+How to fix the problem, Follow steps
+
+1. Open your gemfile (It is present in project folder, directly)
+2. add following gem to your gemfile
+gem ‘rake’,’0.8.7′
+3. Save gemfile.
+4. run command
+bundle exec rake …
+Yes, as it is with … (three dots)
+5. run command bundle install, to install missing gems, if any.
+bundle install
+6. and your problem is solved.
+7. Good Luck.
